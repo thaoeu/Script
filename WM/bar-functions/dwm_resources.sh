@@ -15,15 +15,16 @@ dwm_resources () {
 	echo $(head -c 2 /sys/class/thermal/thermal_zone0/temp)C
 )
     # Used and total storage in /home (rounded to 1024B)
-    STOUSED=$(df -h | grep '/$' | awk '{print $3}')
-    STOTOT=$(df -h | grep '/$' | awk '{print $2}')
-    STOPER=$(df -h | grep '/$' | awk '{print $5}')
+#    STOUSED=$(df -h | grep '/$' | awk '{print $3}')
+#    STOTOT=$(df -h | grep '/$' | awk '{print $2}')
+#    STOPER=$(df -h | grep '/$' | awk '{print $5}')
+#	            
 
     printf "%s" "$SEP1"
     if [ "$IDENTIFIER" = "unicode" ]; then
-        printf "💻%s CPU %s SSD %s/%s:%s" "$MEMFREE" "$CPU" "$STOUSED" "$STOTOT" "$STOPER"
+        printf "%s ▸%s" "$MEMFREE" "$CPU"
     else
-        printf "STA | MEM %s CPU %s SSD %s/%s: %s" "$MEMFREE" "$CPU" "$STOUSED" "$STOTOT" "$STOPER"
+        printf "STA | MEM %s CPU %s " "$MEMFREE" "$CPU"
     fi
     printf "%s\n" "$SEP2"
 }
