@@ -1,0 +1,9 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":0,
+    "params":{
+      "q":"StartTime:[2021-06-27T00:00:00.000Z TO 2021-06-27T23:59:59.999Z]",
+      "rows":"0"}},
+  "response":{"numFound":0,"start":0,"docs":[]
+  }}
